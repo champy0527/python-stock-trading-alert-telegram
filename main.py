@@ -33,13 +33,14 @@ async def main():
                 f"\nHeadline: {headline}"
                 f"\nBrief: {brief}"
             )
-    else:
-        for headline, brief in news.zip_article_dict().items():
-            await telegram_bot_sendtext(
-                f"{STOCK}: {direction}{percentage_change}%"
-                f"\n\nHEADLINE: {headline}"
-                f"\nBRIEF: {brief}"
-            )
+    """REMOVED THE ELSE DEBUGGER"""
+    # else:
+    #     for headline, brief in news.zip_article_dict().items():
+    #         await telegram_bot_sendtext(
+    #             f"{STOCK}: {direction}{percentage_change}%"
+    #             f"\n\nHEADLINE: {headline}"
+    #             f"\nBRIEF: {brief}"
+    #         )
 
 if __name__ == "__main__":
     asyncio.run(main())
